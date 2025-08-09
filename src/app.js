@@ -10,12 +10,11 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const n = Number(input.value);
 
-  // Calcula con DP (rápido) y valida con recursivo+memo (opcional)
+  
   const dpRes = numTreesDP(n);
   const memoRes = numTreesRecursiveMemo(n);
   out.textContent = `BST distintos para n=${n}: ${dpRes}` + (dpRes === memoRes ? '' : ` (memo: ${memoRes})`);
 
-  // Generar árboles si se solicita y n es pequeño
   treesDiv.innerHTML = '';
   if (showTrees.checked && n <= 4) {
     const roots = generarArboles(1, n);
