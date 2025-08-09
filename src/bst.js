@@ -1,4 +1,3 @@
-// DP (rápido): números de Catalan para contar BSTs de 1..n
 export function numTreesDP(n) {
   const dp = Array(n + 1).fill(0);
   dp[0] = 1; // árbol vacío
@@ -14,7 +13,6 @@ export function numTreesDP(n) {
   return dp[n];
 }
 
-// Recursivo + memo (didáctico, también O(n^2))
 export function numTreesRecursiveMemo(n, memo = []) {
   if (n <= 1) return 1;
   if (memo[n] != null) return memo[n];
@@ -27,7 +25,6 @@ export function numTreesRecursiveMemo(n, memo = []) {
   return total;
 }
 
-// ---------- Generar todos los BST (para n pequeño) ----------
 export class Nodo {
   constructor(dato) {
     this.dato = dato;
@@ -36,7 +33,6 @@ export class Nodo {
   }
 }
 
-// Genera lista de raíces (Nodo) para todos los BST con valores [start..end]
 export function generarArboles(start, end) {
   const lista = [];
   if (start > end) {
@@ -58,7 +54,6 @@ export function generarArboles(start, end) {
   return lista;
 }
 
-// Dibujo simple en texto (preorden con nulls)
 export function prettyTree(root) {
   const out = [];
   function pre(n) {
