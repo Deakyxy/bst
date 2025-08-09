@@ -1,6 +1,6 @@
 import { numTreesDP, numTreesRecursiveMemo, generarArboles } from './bst.js';
 
-// ====== Layout y render SVG ======
+
 function layoutTree(root, xGap = 48, yGap = 64, margin = 20) {
   let order = 0;
   const nodes = [];
