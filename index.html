@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculadora de BST (Catalan)</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Calculadora de BST</h1>
+    <p>Ingresa n (nodos 1..n) para calcular cuántos BST distintos existen.</p>
+
+    <form id="form">
+      <label for="n">n</label>
+      <input id="n" type="number" min="0" max="19" value="5" required />
+      <button type="submit">Calcular</button>
+    </form>
+
+    <section class="results">
+      <h2>Resultado</h2>
+      <div id="output">—</div>
+    </section>
+
+    <section class="details">
+      <h3>Detalles (opcional)</h3>
+      <label class="row">
+        <input id="showTrees" type="checkbox" />
+        Generar árboles (solo si n ≤ 4)
+      </label>
+      <div id="trees"></div>
+    </section>
+
+    <footer>
+      <a id="repoLink" href="#" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+  </main>
+
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>
