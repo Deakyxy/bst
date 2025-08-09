@@ -1,6 +1,6 @@
 export function numTreesDP(n) {
   const dp = Array(n + 1).fill(0);
-  dp[0] = 1; // árbol vacío
+  dp[0] = 1; 
   if (n >= 1) dp[1] = 1;
 
   for (let nodes = 2; nodes <= n; nodes++) {
